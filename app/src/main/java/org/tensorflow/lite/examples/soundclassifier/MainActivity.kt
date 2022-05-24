@@ -191,7 +191,7 @@ class MainActivity : AppCompatActivity() {
   companion object {
     const val REQUEST_RECORD_AUDIO = 1337
     private const val TAG = "AudioDemo"
-    private const val MODEL_FILE = "soundclassifier_with_metadata5000.tflite"
+    private const val MODEL_FILE = "soundclassifier_with_metadata2000.tflite"
     private const val MINIMUM_DISPLAY_THRESHOLD: Float = 0.3f
   }
 }
