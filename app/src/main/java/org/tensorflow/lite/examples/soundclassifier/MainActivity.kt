@@ -129,7 +129,7 @@ class MainActivity : AppCompatActivity() {
           if(filteredModelOutput[0].index != 23)
             if(filteredModelOutput[0].score*100 > 90) {
               var tv = findViewById<TextView>(R.id.tv)
-              tv.text = filteredModelOutput[0].label
+              tv.text = filteredModelOutput[0].label+filteredModelOutput[0].score*100
             }
         }
 
