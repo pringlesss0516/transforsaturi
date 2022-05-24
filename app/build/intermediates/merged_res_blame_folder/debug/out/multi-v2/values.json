@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\gurrl\\AndroidStudioProjects\\examples-master\\lite\\examples\\sound_classification\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1,2,3,4",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "17,97,166,261",
+                        "endColumns": "78,67,93,90",
+                        "endOffsets": "91,160,255,347"
+                    },
+                    "to": {
+                        "startLines": "1046,1062,1113,1121",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "61228,63085,71815,72835",
+                        "endColumns": "78,67,93,90",
+                        "endOffsets": "61302,63148,71904,72921"
+                    }
+                },
                 {
                     "source": "C:\\Users\\gurrl\\.gradle\\caches\\transforms-3\\1111e8ccdea70dab7176598bf91bdcec\\transformed\\recyclerview-1.2.0\\res\\values\\values.xml",
                     "from": {
@@ -61,13 +78,13 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\examples-master\\lite\\examples\\sound_classification\\android\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
                         "startLines": "11,9,10,2,3,4,5,6,7,14,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "412,308,360,55,97,139,181,223,265,509,464",
+                        "startOffsets": "423,317,370,57,100,143,186,229,272,523,476",
                         "endColumns": "51,51,51,41,41,41,41,41,41,44,43",
-                        "endOffsets": "459,355,407,92,134,176,218,260,302,549,503"
+                        "endOffsets": "470,364,417,94,137,180,223,266,309,563,515"
                     },
                     "to": {
                         "startLines": "415,416,417,461,462,463,464,465,466,469,492",
@@ -111,23 +128,6 @@
                         "startOffsets": "55280,55320,56014,56196,56251,57383,57437,57489,57538,57599",
                         "endColumns": "39,46,42,54,46,53,51,48,60,49",
                         "endOffsets": "55315,55362,56052,56246,56293,57432,57484,57533,57594,57644"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\examples-master\\lite\\examples\\sound_classification\\android\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1,2,3,4",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "16,95,163,257",
-                        "endColumns": "78,67,93,90",
-                        "endOffsets": "90,158,252,343"
-                    },
-                    "to": {
-                        "startLines": "1046,1062,1113,1121",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "61228,63085,71815,72835",
-                        "endColumns": "78,67,93,90",
-                        "endOffsets": "61302,63148,71904,72921"
                     }
                 },
                 {
@@ -207,25 +207,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\examples-master\\lite\\examples\\sound_classification\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "53",
-                        "endLines": "8",
-                        "endColumns": "12",
-                        "endOffsets": "430"
-                    },
-                    "to": {
-                        "startLines": "1138",
-                        "startColumns": "4",
-                        "startOffsets": "74064",
-                        "endLines": "1144",
-                        "endColumns": "12",
-                        "endOffsets": "74441"
-                    }
-                },
-                {
                     "source": "C:\\Users\\gurrl\\.gradle\\caches\\transforms-3\\cb3022b8075c179783c2797c0ccbaca0\\transformed\\cardview-1.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,35,36,37,38,45,47,50,7",
@@ -242,6 +223,25 @@
                         "endLines": "24,411,412,413,414,593,594,595,1172,3033,3036,3039,5894",
                         "endColumns": "51,60,61,61,63,58,56,53,12,12,12,12,24",
                         "endOffsets": "1181,20238,20300,20362,20426,32285,32342,32396,76306,198300,198426,198554,378213"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "438"
+                    },
+                    "to": {
+                        "startLines": "1138",
+                        "startColumns": "4",
+                        "startOffsets": "74064",
+                        "endLines": "1144",
+                        "endColumns": "12",
+                        "endOffsets": "74441"
                     }
                 }
             ]

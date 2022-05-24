@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\gurrl\\AndroidStudioProjects\\examples-master\\lite\\examples\\sound_classification\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-be\\values-be.xml",
+            "outputFile": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-be\\values-be.xml",
             "map": [
                 {
                     "source": "C:\\Users\\gurrl\\.gradle\\caches\\transforms-3\\6e8f5401a9bd1b7f56aa049ac906f640\\transformed\\appcompat-1.2.0\\res\\values-be\\values-be.xml",
