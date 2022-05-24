@@ -25,6 +25,7 @@ import android.os.Handler
 import android.os.HandlerThread
 import android.util.Log
 import android.view.WindowManager
+import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -119,8 +120,17 @@ class MainActivity : AppCompatActivity() {
 
         // Updating the UI
         runOnUiThread {
+          var tv = findViewById<TextView>(R.id.tv)
+          tv.text = null
+
           probabilitiesAdapter.categoryList = filteredModelOutput
           probabilitiesAdapter.notifyDataSetChanged()
+
+          if(filteredModelOutput[0].index != 23)
+            if(filteredModelOutput[0].score*100 > 90) {
+              var tv = findViewById<TextView>(R.id.tv)
+              tv.text = filteredModelOutput[0].label
+            }
         }
 
         // Rerun the classification after a certain interval
@@ -190,7 +200,7 @@ class MainActivity : AppCompatActivity() {
   companion object {
     const val REQUEST_RECORD_AUDIO = 1337
     private const val TAG = "AudioDemo"
-    private const val MODEL_FILE = "soundclassifier_with_metadata2000.tflite"
+    private const val MODEL_FILE = "soundclassifier_with_metadata10000.tflite"
     private const val MINIMUM_DISPLAY_THRESHOLD: Float = 0.3f
   }
 }

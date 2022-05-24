@@ -40,10 +40,13 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final Toolbar toolbar;
 
+  @NonNull
+  public final TextView tv;
+
   private ActivityMainBinding(@NonNull CoordinatorLayout rootView,
       @NonNull Slider classificationIntervalSlider, @NonNull View dividerView,
       @NonNull SwitchMaterial inputSwitch, @NonNull TextView overlapFactorTextView,
-      @NonNull RecyclerView recyclerView, @NonNull Toolbar toolbar) {
+      @NonNull RecyclerView recyclerView, @NonNull Toolbar toolbar, @NonNull TextView tv) {
     this.rootView = rootView;
     this.classificationIntervalSlider = classificationIntervalSlider;
     this.dividerView = dividerView;
@@ -51,6 +54,7 @@ public final class ActivityMainBinding implements ViewBinding {
     this.overlapFactorTextView = overlapFactorTextView;
     this.recyclerView = recyclerView;
     this.toolbar = toolbar;
+    this.tv = tv;
   }
 
   @Override
@@ -116,8 +120,14 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tv;
+      TextView tv = rootView.findViewById(id);
+      if (tv == null) {
+        break missingId;
+      }
+
       return new ActivityMainBinding((CoordinatorLayout) rootView, classificationIntervalSlider,
-          dividerView, inputSwitch, overlapFactorTextView, recyclerView, toolbar);
+          dividerView, inputSwitch, overlapFactorTextView, recyclerView, toolbar, tv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
