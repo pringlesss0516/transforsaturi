@@ -4,7 +4,19 @@
         "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_subactivity.xml",
+        "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\layout\\activity_subactivity.xml"
+    },
+    {
         "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_probability.xml",
         "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\layout\\item_probability.xml"
+    },
+    {
+        "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\intro_activity.xml",
+        "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\layout\\intro_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_content_main.xml",
+        "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\layout\\activity_content_main.xml"
     }
 ]

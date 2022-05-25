@@ -23,9 +23,9 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.HandlerThread
+import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.WindowManager
-import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -33,6 +33,9 @@ import androidx.core.os.HandlerCompat
 import org.tensorflow.lite.examples.soundclassifier.databinding.ActivityMainBinding
 import org.tensorflow.lite.task.audio.classifier.AudioClassifier
 
+import android.widget.TextView
+import android.widget.Toast
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
   private val probabilitiesAdapter by lazy { ProbabilitiesAdapter() }
@@ -86,6 +89,31 @@ class MainActivity : AppCompatActivity() {
     }
   }
 
+  //음성 tts 구현 부분 코드
+  private var tts: TextToSpeech? = null
+
+  private fun initTextToSpeech() {
+    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {   // 롤리팝(api level: 21, android 5.0) 이상에서 지원
+      Toast.makeText(this, "SDK version is low", Toast.LENGTH_SHORT).show()
+      return
+    }
+
+    tts = TextToSpeech(this) {
+      if (it == TextToSpeech.SUCCESS) {
+        val result = tts?.setLanguage(Locale.KOREAN)
+        if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+          Toast.makeText(this, "Language not supported", Toast.LENGTH_SHORT).show()
+        }
+        Toast.makeText(this, "TTS setting successed", Toast.LENGTH_SHORT).show()
+      } else {
+        Toast.makeText(this, "TTS init failed", Toast.LENGTH_SHORT).show()
+      }
+    }
+  }
+  private fun ttsSpeak(strTTS: String) {
+    tts?.speak(strTTS, TextToSpeech.QUEUE_ADD, null, null)
+  }
+
   private fun startAudioClassification() {
     // If the audio classifier is initialized and running, do nothing.
     if (audioClassifier != null) return;
@@ -120,19 +148,17 @@ class MainActivity : AppCompatActivity() {
 
         // Updating the UI
         runOnUiThread {
-          var tv = findViewById<TextView>(R.id.tv)
-          tv.text = null
-
           probabilitiesAdapter.categoryList = filteredModelOutput
           probabilitiesAdapter.notifyDataSetChanged()
-
-          if(filteredModelOutput[0].index != 23)
-            if(filteredModelOutput[0].score*100 > 90) {
-              var tv = findViewById<TextView>(R.id.tv)
-              tv.text = filteredModelOutput[0].label+filteredModelOutput[0].score*100
-            }
+          if (filteredModelOutput.isNullOrEmpty() != true) {
+            if (filteredModelOutput[0].index != 23)
+              if (filteredModelOutput[0].score * 100 > 90) {
+                var tv = findViewById<TextView>(R.id.tv)
+                tv.text = filteredModelOutput[0].label
+                ttsSpeak(filteredModelOutput[0].label)
+              }
+          }
         }
-
         // Rerun the classification after a certain interval
         handler.postDelayed(this, classificationInterval)
       }
@@ -155,7 +181,7 @@ class MainActivity : AppCompatActivity() {
 
   override fun onTopResumedActivityChanged(isTopResumedActivity: Boolean) {
     // Handles "top" resumed event on multi-window environment
-    if (isTopResumedActivity) {
+    if (isTopResumedActivity && isRecordAudioPermissionGranted()) {
       startAudioClassification()
     } else {
       stopAudioClassification()
@@ -163,9 +189,9 @@ class MainActivity : AppCompatActivity() {
   }
 
   override fun onRequestPermissionsResult(
-          requestCode: Int,
-          permissions: Array<out String>,
-          grantResults: IntArray
+    requestCode: Int,
+    permissions: Array<out String>,
+    grantResults: IntArray
   ) {
     if (requestCode == REQUEST_RECORD_AUDIO) {
       if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -179,15 +205,16 @@ class MainActivity : AppCompatActivity() {
 
   @RequiresApi(Build.VERSION_CODES.M)
   private fun requestMicrophonePermission() {
-    if (ContextCompat.checkSelfPermission(
-                    this,
-                    Manifest.permission.RECORD_AUDIO
-            ) == PackageManager.PERMISSION_GRANTED
-    ) {
+    if (isRecordAudioPermissionGranted()) {
       startAudioClassification()
     } else {
       requestPermissions(arrayOf(Manifest.permission.RECORD_AUDIO), REQUEST_RECORD_AUDIO)
     }
+  }
+
+  private fun isRecordAudioPermissionGranted(): Boolean {
+    return ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO
+    ) == PackageManager.PERMISSION_GRANTED
   }
 
   private fun keepScreenOn(enable: Boolean) =

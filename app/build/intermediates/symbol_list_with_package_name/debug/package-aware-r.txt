@@ -1645,6 +1645,8 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_baseline_volume_up_24
+drawable ic_book
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher
@@ -1654,8 +1656,10 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_pencil
 drawable icn_chevron_down
 drawable icn_chevron_up
+drawable logo
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1780,6 +1784,9 @@ id beginning
 id blocking
 id bottom
 id bounce
+id btn_move
+id button6
+id button7
 id buttonPanel
 id cache_measures
 id cancel_button
@@ -1872,6 +1879,7 @@ id group_divider
 id grouping
 id groups
 id guideline
+id guideline2
 id header_title
 id hideable
 id home
@@ -1901,6 +1909,7 @@ id leftToRight
 id line1
 id line3
 id linear
+id linearLayout
 id listMode
 id list_item
 id masked
@@ -2100,6 +2109,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tv
+id tvVoice
 id unchecked
 id uniform
 id unlabeled
@@ -2172,7 +2182,9 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_content_main
 layout activity_main
+layout activity_subactivity
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2189,6 +2201,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout intro_activity
 layout item_probability
 layout material_chip_input_combo
 layout material_clock_display
@@ -3210,6 +3223,7 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml activity_main_scene
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

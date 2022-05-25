@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/gurrl/AndroidStudioProjects/saturi test/app/src/main/res/drawable-hdpi/ic_book.xml" value="0.1625" />
         <entry key="..\:/Users/gurrl/AndroidStudioProjects/saturi test/app/src/main/res/layout/activity_main.xml" value="0.14266304347826086" />
+        <entry key="..\:/Users/gurrl/AndroidStudioProjects/saturi test/app/src/main/res/layout/activity_subactivity.xml" value="0.11499493414387031" />
+        <entry key="..\:/Users/gurrl/AndroidStudioProjects/saturi test/app/src/main/res/layout/intro_activity.xml" value="0.20153985507246377" />
       </map>
     </option>
   </component>

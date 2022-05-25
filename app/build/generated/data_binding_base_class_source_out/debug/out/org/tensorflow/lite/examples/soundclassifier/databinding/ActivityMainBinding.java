@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.widget.Guideline;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
@@ -29,6 +30,9 @@ public final class ActivityMainBinding implements ViewBinding {
   public final View dividerView;
 
   @NonNull
+  public final Guideline guideline2;
+
+  @NonNull
   public final SwitchMaterial inputSwitch;
 
   @NonNull
@@ -45,11 +49,13 @@ public final class ActivityMainBinding implements ViewBinding {
 
   private ActivityMainBinding(@NonNull CoordinatorLayout rootView,
       @NonNull Slider classificationIntervalSlider, @NonNull View dividerView,
-      @NonNull SwitchMaterial inputSwitch, @NonNull TextView overlapFactorTextView,
-      @NonNull RecyclerView recyclerView, @NonNull Toolbar toolbar, @NonNull TextView tv) {
+      @NonNull Guideline guideline2, @NonNull SwitchMaterial inputSwitch,
+      @NonNull TextView overlapFactorTextView, @NonNull RecyclerView recyclerView,
+      @NonNull Toolbar toolbar, @NonNull TextView tv) {
     this.rootView = rootView;
     this.classificationIntervalSlider = classificationIntervalSlider;
     this.dividerView = dividerView;
+    this.guideline2 = guideline2;
     this.inputSwitch = inputSwitch;
     this.overlapFactorTextView = overlapFactorTextView;
     this.recyclerView = recyclerView;
@@ -96,6 +102,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.guideline2;
+      Guideline guideline2 = rootView.findViewById(id);
+      if (guideline2 == null) {
+        break missingId;
+      }
+
       id = R.id.input_switch;
       SwitchMaterial inputSwitch = rootView.findViewById(id);
       if (inputSwitch == null) {
@@ -127,7 +139,7 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((CoordinatorLayout) rootView, classificationIntervalSlider,
-          dividerView, inputSwitch, overlapFactorTextView, recyclerView, toolbar, tv);
+          dividerView, guideline2, inputSwitch, overlapFactorTextView, recyclerView, toolbar, tv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

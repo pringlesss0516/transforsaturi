@@ -8,8 +8,16 @@
         "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_content_main.xml.flat",
+        "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\layout\\activity_content_main.xml"
+    },
+    {
         "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_logo.png.flat",
+        "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\drawable-hdpi\\logo.png"
     },
     {
         "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
@@ -22,6 +30,10 @@
     {
         "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_subactivity.xml.flat",
+        "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\layout\\activity_subactivity.xml"
     },
     {
         "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_icn_chevron_down.png.flat",
@@ -104,8 +116,28 @@
         "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\drawable-xxhdpi\\tfl2_logo_dark.png"
     },
     {
+        "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_pencil.xml.flat",
+        "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\drawable-hdpi\\ic_pencil.xml"
+    },
+    {
+        "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\res\\merged\\debug\\layout_intro_activity.xml.flat",
+        "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\layout\\intro_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_volume_up_24.xml.flat",
+        "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\drawable-hdpi\\ic_baseline_volume_up_24.xml"
+    },
+    {
         "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_book.xml.flat",
+        "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\drawable-hdpi\\ic_book.xml"
+    },
+    {
+        "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\res\\merged\\debug\\xml_activity_main_scene.xml.flat",
+        "source": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\src\\main\\res\\xml\\activity_main_scene.xml"
     },
     {
         "merged": "C:\\Users\\gurrl\\AndroidStudioProjects\\saturi test\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
